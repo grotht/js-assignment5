@@ -39,5 +39,12 @@ const items = [
 // Omit the 'age' element
 
 const person = items // append your code here
+	.filter(item => !item.includes('age'))
+	.reduce(((acc, [key, value]) => {
+		acc[key] = value
+		return acc
+	}), { })
+
+	// console.log(person)
 
 test("Problem 4", person)

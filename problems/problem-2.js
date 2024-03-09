@@ -50,5 +50,10 @@ const strings = [
 ]
 
 const jedi = strings // append your code here
+	.map(string => `{${string}}`)
+	.map(string => obj = JSON.parse(string))
+	.filter(obj => obj.occupation === "Jedi")
+
+	// console.log(jedi)
 
 test("Problem 2", jedi)
